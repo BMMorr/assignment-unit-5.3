@@ -18,3 +18,12 @@ addToCollection('USB', 'Fred Again..', '2022');
 addToCollection('KIDS SEE GHOSTS', 'Kid Cudi', '2009');
 
 console.log(collection);
+
+function showCollection(array) {
+    console.log('Number of items in the array ', array.length);
+    for (let i = 0; i < array.length; i++) {
+        console.log(`${array[i].title} by ${array[i].artists}, published in ${array[i].yearPublished}`);
+        
+    }
+}
+showCollection(collection);
