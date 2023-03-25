@@ -10,7 +10,7 @@ function addToCollection(title, artists, yearPublished) {
     collection.push(album)
     return console.log(album);
 }
-addToCollection('Demon Days', 'Gorrilaz', '2005');
+addToCollection('Demon Days', 'Gorillaz', '2005');
 addToCollection('Man On The Moon', 'Kid Cudi', '2009');
 addToCollection('Mister Asylum', 'Highley Suspect', '2015');
 addToCollection('-!-', 'Dead Poet Society', '2021');
@@ -27,3 +27,16 @@ function showCollection(array) {
     }
 }
 showCollection(collection);
+
+function findByArtist(artist) {
+    foundArtist = [];
+    for (let i = 0; i < collection.length; i++) {
+        if (collection[i].artists === artist) {
+            foundArtist.push(collection[i])
+        }
+    } 
+    return foundArtist; 
+}
+console.log(findByArtist('Kid Cudi'));
+console.log(findByArtist('Fleetwood Mac'));
+console.log(findByArtist('Gorillaz'));
